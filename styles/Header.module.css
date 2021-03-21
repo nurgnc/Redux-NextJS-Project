@@ -68,7 +68,7 @@
         justify-content: space-around;
         align-items: center;
         flex-direction: column;
-        background: rgb(238, 227, 206);
+        background: #c5aca1;
         z-index: 100;
         opacity: 0.97;
         transition: 0.5s linear;
@@ -82,8 +82,5 @@
         position: absolute;
         top: 10px;
         right: 20px;
-    }
-    .header .nav ul.toggle {
-        top: 0;
     }
 }
