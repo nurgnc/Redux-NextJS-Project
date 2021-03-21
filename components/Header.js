@@ -29,7 +29,7 @@ const Header = (props) => {
                     <li><Link href="/about">About</Link></li>
                     <li><Link href="/products">Products</Link></li>
                     <li><Link href="/contact">Contact</Link></li>
-                    <li><Link href="/loginRegister">Login / Register</Link></li>
+                    <li><Link href="/login">Login / Register</Link></li>
                     <li className="close" onClick={menuToggle}>
                         <img src={Close} alt="menu" width="20" />
                     </li>

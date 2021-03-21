@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Slider from '../components/Slider'
+import { SliderData } from '../components/SliderData'
 
 export default function Home() {
   return (
@@ -9,9 +10,7 @@ export default function Home() {
         <link rel="icon" href="/shopping-cart.svg" />
       </Head>
       
-        <h1 className={styles.title}>
-          Welcome to Next.js!
-        </h1>
+      <Slider slides={SliderData} />
     </div>
   )
 }
