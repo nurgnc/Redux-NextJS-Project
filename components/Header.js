@@ -19,7 +19,7 @@ const Header = (props) => {
                 <AiOutlineBars fontSize="30px" />
             </div>
             <div className={styles.logo}>
-                <h1><Link href="/" style={{textDecoration: "none"}}>Shop</Link></h1>
+                <h1><Link href="/" ><a>Shop</a></Link></h1>
             </div>
             <nav>
                 <ul className={toggle ? 'toggle' : ''}>
@@ -28,14 +28,14 @@ const Header = (props) => {
                     <li><Link href="/products"><a>Products</a></Link></li>
                     <li><Link href="/contact"><a>Contact</a></Link></li>
                     <li><Link href="/login"><a>Login / Register</a></Link></li>
-                    <li className="close" onClick={menuToggle}>
+                    <li className={styles.close} onClick={menuToggle}>
                         <AiFillCloseCircle fontSize="30px" />
                     </li>
                 </ul>
                 <div className={styles.navcart}>
                     <span>{props.cart.length}</span>
                     <Link href="/cart">
-                        <a><AiOutlineShoppingCart fontSize="30px"/></a>
+                        <a><AiOutlineShoppingCart fontSize="40px"/></a>
                     </Link>
                 </div>
             </nav>
