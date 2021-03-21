@@ -18,8 +18,8 @@ const Cart = (props) => {
                             </div>
 
                             <p>{item.description}</p>
-                            <Link href="/cart" className={styles.cart}>
-                                <a>Add To Cart</a>
+                            <Link href="/cart" >
+                                <a className={styles.cart}>Add To Cart</a>
                             </Link>
                         </div>
                     </div>
