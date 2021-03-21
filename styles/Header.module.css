@@ -69,7 +69,7 @@
         align-items: center;
         flex-direction: column;
         background: rgb(238, 227, 206);
-        z-index: 99;
+        z-index: 100;
         opacity: 0.97;
         transition: 0.5s linear;
     }
@@ -83,7 +83,7 @@
         top: 10px;
         right: 20px;
     }
-    .header ul .toggle {
+    .header .nav ul.toggle {
         top: 0;
     }
 }
