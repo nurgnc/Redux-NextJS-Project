@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
 import Head from 'next/head'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import styles from '../styles/Products.module.css'
 //Redux
 import { connect } from 'react-redux';
-import { getProducts } from '../../store/actions/Api';
-import { addToCart } from '../../store/actions/AddToCart';
+import { getProducts } from '../store/actions/Api';
+import { addToCart } from '../store/actions/AddToCart';
 
 const Products = (props) => {
 
@@ -16,7 +16,7 @@ const Products = (props) => {
 
 
     return (
-        <div id="product">
+        <div id={styles.product}>
             <Head>
                 <title>Products</title>
                 <link rel="icon" href="/shopping-cart.svg" />
@@ -24,12 +24,13 @@ const Products = (props) => {
             {
                 props.products.map(product => (
                     <div className={styles.card} key={product.id}>
-                        <Link to={`/products/${product.id}`}>
-                            <img src={product.image} alt={product.name} />
+                        <Link href={`/products/${product.id}`}>
+                            <a><img src={product.image} alt={product.name} /></a>
                         </Link>
                         <div className={styles.content}>
                             <h3>
-                                <Link to={`/products/${product.id}`} style={{ textDecoration: "none" }}>{product.name}</Link>
+                                <Link href={`/products/${product.id}`} style={{ textDecoration: "none" }}>
+                                <a>{product.name}</a></Link>
                             </h3>
                             <span>${product.price}</span>
                             <p>{product.description}</p>

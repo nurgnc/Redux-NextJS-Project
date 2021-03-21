@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import styles from '../styles/Cart.module.css';
 
 const Cart = (props) => {
@@ -22,8 +22,8 @@ const Cart = (props) => {
                             </div>
 
                             <p>{item.description}</p>
-                            <Link to="/cart" className={styles.cart}>
-                                Add To Cart
+                            <Link href="/cart" className={styles.cart}>
+                                <a>Add To Cart</a>
                             </Link>
                         </div>
                     </div>

@@ -2,9 +2,7 @@ import React, {useState} from 'react'
 //Routing
 import Link from 'next/link'
 //Icons
-import Menu from '../public/bars.svg'
-import Close from '../public/times.svg'
-import CartIcon from '../public/shopping-cart.svg'
+import {AiOutlineBars, AiFillCloseCircle, AiOutlineShoppingCart} from 'react-icons/ai';
 // Styles
 import styles from '../styles/Header.module.css'
 //Redux
@@ -18,26 +16,26 @@ const Header = (props) => {
     return (
         <header className={styles.header}>
             <div className={styles.menu} onClick={menuToggle}>
-                <img src={Menu} alt="menu" width="20" />
+                <AiOutlineBars fontSize="30px" />
             </div>
             <div className={styles.logo}>
                 <h1><Link href="/" style={{textDecoration: "none"}}>Shop</Link></h1>
             </div>
             <nav>
-                <ul className={toggle ? "toggle" : ""}>
-                    <li><Link href="/">Home</Link></li>
-                    <li><Link href="/about">About</Link></li>
-                    <li><Link href="/products">Products</Link></li>
-                    <li><Link href="/contact">Contact</Link></li>
-                    <li><Link href="/login">Login / Register</Link></li>
+                <ul className={toggle ? 'toggle' : ''}>
+                    <li><Link href="/"><a>Home</a></Link></li>
+                    <li><Link href="/about"><a>About</a></Link></li>
+                    <li><Link href="/products"><a>Products</a></Link></li>
+                    <li><Link href="/contact"><a>Contact</a></Link></li>
+                    <li><Link href="/login"><a>Login / Register</a></Link></li>
                     <li className="close" onClick={menuToggle}>
-                        <img src={Close} alt="menu" width="20" />
+                        <AiFillCloseCircle fontSize="30px" />
                     </li>
                 </ul>
-                <div className={styles.nav-cart}>
+                <div className={styles.navcart}>
                     <span>{props.cart.length}</span>
                     <Link href="/cart">
-                        <img src={CartIcon} alt="menu" width="30" />
+                        <a><AiOutlineShoppingCart fontSize="30px"/></a>
                     </Link>
                 </div>
             </nav>
