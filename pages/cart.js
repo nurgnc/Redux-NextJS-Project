@@ -7,10 +7,6 @@ import styles from '../styles/Cart.module.css';
 const Cart = (props) => {
     return (
         <div>
-            <Head>
-                <title>Cart</title>
-                <link rel="icon" href="/shopping-cart.svg" />
-            </Head>
             {
                 props.cart.map(item => (
                     <div className={styles.details} key={item.id}>

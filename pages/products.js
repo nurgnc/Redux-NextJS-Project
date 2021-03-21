@@ -14,13 +14,8 @@ const Products = (props) => {
     }, []);
 
 
-
     return (
         <div id={styles.product}>
-            <Head>
-                <title>Products</title>
-                <link rel="icon" href="/shopping-cart.svg" />
-            </Head>
             {
                 props.products.map(product => (
                     <div className={styles.card} key={product.id}>

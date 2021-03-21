@@ -4,12 +4,7 @@ import { SliderData } from '../components/SliderData'
 
 export default function Home() {
   return (
-    <div>
-      <Head>
-        <title>Shop App</title>
-        <link rel="icon" href="/shopping-cart.svg" />
-      </Head>
-      
+    <div>    
       <Slider slides={SliderData} />
     </div>
   )
